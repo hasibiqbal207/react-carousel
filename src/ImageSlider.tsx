@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from 'lucide-react'
 import "./image-slider.css"
 
@@ -26,6 +26,11 @@ export function ImageSlider({ images }: Readonly<ImageSliderProps>) {
             return index - 1
         })    
     }
+
+    useEffect(() => {
+        const interval = setInterval(showNextImage, 10000)
+        return () => clearInterval(interval)
+    }, [])
 
     return (
         <section 
