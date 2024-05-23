@@ -24,7 +24,6 @@ export default function App() {
       }}
     >
       <ImageSlider images={IMAGES} />
-
     </div>
   )
 }

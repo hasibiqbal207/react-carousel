@@ -37,6 +37,9 @@ export function ImageSlider({ images }: Readonly<ImageSliderProps>) {
             aria-label='Image Slider'
             style={{ width: "100%", height: "100%", position: "relative" }}
         >
+            <a href="#after-image-slider-controls" className="skip-link">
+                Skip Image Slider Controls
+            </a>
             <div
                 style={{
                     width: "100%",
@@ -102,5 +105,23 @@ export function ImageSlider({ images }: Readonly<ImageSliderProps>) {
                     </button>
                 ))}
             </div>
+
+            <div 
+                id="after-image-slider-controls"
+                style={{
+                    margin: "1rem auto",
+                }}
+            >
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                </p>    
+                <p>  
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>    
+            </div>
+            <a href="/" style={{ fontSize: "2rem" }}>
+                Test Link
+            </a>
         </section>
 )}
